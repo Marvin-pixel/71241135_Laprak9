@@ -1,0 +1,17 @@
+import random
+import string
+
+teks = []
+n = int(input("Berapa jumlah email: "))
+
+for i in range(n):
+    data = input(f"Data ke-{i+1}: ")
+    teks.append(data)
+
+for data in teks:
+    email = data.split()[0]
+    username = email.split("@")[0]
+
+    password = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+
+    print(f"{email} username: {username}, password: {password}")
