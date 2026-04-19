@@ -1,0 +1,5 @@
+kalimat = input("Masukkan kalimat: ")
+
+hasil = " ".join(kalimat.split())
+
+print("Output:", hasil)
