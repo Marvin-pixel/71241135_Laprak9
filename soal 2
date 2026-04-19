@@ -1,0 +1,11 @@
+import string
+
+kalimat = input("Masukkan kalimat: ").lower()
+kata = input("Masukkan kata: ").lower()
+
+for tanda in string.punctuation:
+    kalimat = kalimat.replace(tanda, "")
+
+jumlah = kalimat.split().count(kata)
+
+print(f"{kata} ada {jumlah} buah")
